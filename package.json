@@ -1,0 +1,23 @@
+{
+  "name": "discursive",
+  "version": "1.0.0",
+  "description": "Political Discourse Platform",
+  "main": "index.js",
+  "dependencies": {
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CKunhardt/discursive.git"
+  },
+  "author": "C. Kunhardt, A. Pooley, A. Colby",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/CKunhardt/discursive/issues"
+  },
+  "homepage": "https://github.com/CKunhardt/discursive#readme"
+}
