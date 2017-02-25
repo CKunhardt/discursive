@@ -16,10 +16,11 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Create HTTP server with Socket.IO
  */
 
-var server = http.createServer(app);
+var server = http.Server(app);
+var io = require('socket.io')(server);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -28,6 +29,18 @@ var server = http.createServer(app);
 server.listen(port, '0.0.0.0');
 server.on('error', onError);
 server.on('listening', onListening);
+
+/**
+ * Socket.IO connection handler. See https://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socketio-and-expressjs--net-31708 for details.
+ */
+
+io.on('connection', function (socket) {
+    socket.emit('message', { message: 'Welcome to the chat!' });
+    socket.on('send', function (data) {
+		console.log(data);
+        io.emit('message', data);
+    });
+});
 
 /**
  * Normalize a port into a number, string, or false.
@@ -88,3 +101,5 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+

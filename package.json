@@ -10,11 +10,11 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "express": "~4.14.1",
-    "pug": "latest",
     "morgan": "~1.7.0",
     "pg-promise": "^5.5.8",
+    "pug": "latest",
     "serve-favicon": "~2.3.2",
-    "socket.io": "latest"
+    "socket.io": "^1.7.3"
   },
   "description": "Political Discourse Platform for Macathon 2017",
   "main": "app.js",
