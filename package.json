@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "discursive",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,23 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "express": "~4.14.1",
-    "jade": "~1.11.0",
+    "pug": "latest",
     "morgan": "~1.7.0",
     "pg-promise": "^5.5.8",
-    "serve-favicon": "~2.3.2"
-  }
+    "serve-favicon": "~2.3.2",
+    "socket.io": "latest"
+  },
+  "description": "Political Discourse Platform for Macathon 2017",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CKunhardt/discursive.git"
+  },
+  "author": "ckunhardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CKunhardt/discursive/issues"
+  },
+  "homepage": "https://github.com/CKunhardt/discursive#readme"
 }
