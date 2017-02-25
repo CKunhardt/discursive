@@ -9,12 +9,12 @@ window.onload = function() {
 	var name = document.getElementById("name");
 
     socket.on('message', function (data) {
-		console.log(data);
         if(data.message) {
-            messages.push(data.message);
+            messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                html += messages[i] + '<br />';
+                html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
+                html += messages[i].message + '<br />';
             }
             content.innerHTML = html;
 			content.scrollTop = content.scrollHeight;

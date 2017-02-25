@@ -1,29 +1,7 @@
-html
-	head
-		title= "Discursive Chat"
-		script(type='application/javascript', src='/js/chat.js')
-		script(type='application/javascript', src='/js/socket.io/socket.io.js')
-		
-		link(href='css/style.css', rel='stylesheet', type='text/css')
-	body
-		#wrapper
-			#header
-				h1 Discursive
-			#nav
-				ul
-					li I'll
-					li Be
-					li A
-					li Nav
-					li Someday!
-			#main
-				#content
-				.controls
-					input#field
-					input#send(type='button', value='send')
-					br
-					br
-					| Name: 
-					input#name
-			#footer
-			script(src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js', type='text/javascript')
+extends layout
+
+block main
+	a(href="/chat")
+		#get-started Get Started
+	
+	

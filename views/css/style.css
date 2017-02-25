@@ -1,19 +1,64 @@
+body {
+	background: url('../images/background.jpg') fixed;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 #content {
-	width: 100%;
+	width: auto;
 	height: 300px;
-	margin: 0 auto 20px;
+	margin: 0 auto 10px;
 	border: solid 1px #999;
-	overflow-y: scroll;
+	overflow-y: auto;
+	background-color: #e0eeff;
+	border-radius:10px 10px 0 0;
+	padding: 10px;
+	box-shadow: 0 0 20px #cccccc inset;
 }
-#field, #name {
-	width:350px;
-}
-#header {
+.controls{
+	display: flex;
 	height: 100px;
 }
-#header h1 {
+#exit {
+	flex: 2;
+	margin-right: 10px;
+	border-radius: 0 0 0 10px;
+	background-color: #DEBABA;
+	font-size: 2em;
+	color: #444444;
+	text-shadow: 0 0 3px #eeeeee;
+}
+#field {
+	flex: 8;
+	margin: initial 10px;
+}
+#send {
+	flex: 2;
+	margin-left: 10px;
+	border-radius: 0 0 10px 0;
+	background-color: #FFFEE7;
+	font-size: 2em;
+	color: #444444;
+}
+#hotkey {
+	color: #999999;
+	font-size: .5em;
+}
+#namebox {
 	display: table;
-	margin: 0 auto;
+	margin: 30px auto;
+}
+#name {
+	padding: 10px;
+	border-radius: 5px;
+}
+header {
+
+}
+header #logo {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 150px 450px;
+	background:url('../images/discursive-md.png') no-repeat center/75%;
 }
 #nav {
 	height: 100px;
@@ -31,4 +76,39 @@
 	border: 1px solid #eaeaea;
 	padding: 25px;
 	text-align: center;
+}
+main {
+	display: block;
+	margin: 0 auto;
+	width: 75%;
+}
+
+a {
+	text-decoration: none;
+	color: #2b2b2b;
+}
+#get-started {
+	margin: 100px auto;
+	display: table;
+	padding: 30px 75px;
+	background-color: rgba(55,150,200,0.25);
+	box-shadow: 0 0 10px #cccccc;
+	border-radius: 10px;
+	border: solid 5px #666666;
+	color: #2b2b2b;
+	font-size: 2em;
+	font-weight: 200;
+}
+#get-started:hover {
+	background-color: rgba(55,150,200,0.5);
+}
+footer {
+	position: fixed;
+	bottom: 5px;
+}
+#copy {
+	border-radius: 5px;
+	border: 2px solid #cccccc;
+	background: rgba(185,185,185,0.5);
+	padding: 0 5px;
 }
