@@ -34,8 +34,18 @@ server.on('listening', onListening);
  * Socket.IO connection handler. See https://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socketio-and-expressjs--net-31708 for details.
  */
 
+ var roomno = 1;
+ 
 io.on('connection', function (socket) {
     socket.emit('message', { message: 'Welcome to the chat!' });
+	
+	if(io.nsps['/'].adapter.rooms["room-"+roomno] && io.nsps['/'].adapter.rooms["room-"+roomno].length > 1)
+		roomno++;
+	socket.join("room-"+roomno);
+	
+	//Send this event to everyone in the room.
+	io.in("room-"+roomno).emit('connectToRoom', "You are in room no. "+roomno);
+	
     socket.on('send', function (data) {
 		console.log(data);
         io.emit('message', data);

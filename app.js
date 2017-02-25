@@ -28,7 +28,7 @@ app.get('/main', function (req, res) {
 });
 
 // uncomment after placing your favicon in /views
-//app.use(favicon(path.join(__dirname, 'views', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'views', 'favicon.ico')));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

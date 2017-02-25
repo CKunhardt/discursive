@@ -1,6 +1,7 @@
 window.onload = function() {
 
     var messages = [];
+	var announce = [];
     var socket = io.connect('http://express.dev:3000');
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
@@ -20,6 +21,17 @@ window.onload = function() {
         } else {
             console.log("There is a problem:", data);
         }
+    });
+	
+    socket.on('connectToRoom', function(data) {
+		console.log(data);
+        if(data) {
+			announce.push(data);
+			var html = content.innerHTML;
+			html += announce[0] + '<br />';
+			console.log(announce);
+			content.innerHTML = html;
+		}
     });
 
 	sendButton.onclick = sendMessage = function() {
