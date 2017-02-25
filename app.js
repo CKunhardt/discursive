@@ -19,10 +19,6 @@ app.get('/', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
-<<<<<<< HEAD
-// uncomment after placing your favicon in /views
-//app.use(favicon(path.join(__dirname, 'views', 'favicon.ico')));
-=======
 app.get('/survey', function (req, res) {
 	res.render('survey', { title: 'Survey Title Here', message: 'Render message here' })
 });
@@ -31,9 +27,9 @@ app.get('/main', function (req, res) {
 	res.render('main', { title: 'Login or Sign Up', message: 'Render message here' })
 });
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
->>>>>>> apooley
+// uncomment after placing your favicon in /views
+//app.use(favicon(path.join(__dirname, 'views', 'favicon.ico')));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
