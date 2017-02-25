@@ -18,6 +18,14 @@ app.get('/', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
+app.get('/survey', function (req, res) {
+	res.render('survey', { title: 'Survey Title Here', message: 'Render message here' })
+});
+
+app.get('/main', function (req, res) {
+	res.render('main', { title: 'Login or Sign Up', message: 'Render message here' })
+});
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
